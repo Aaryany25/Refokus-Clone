@@ -20,7 +20,7 @@ function Navbar() {
           {elem}</a>)}
      </div>
         </div>
-             <Button/>
+             <Button content="Get Started"/>
      </div>
 
 
