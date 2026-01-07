@@ -28,7 +28,7 @@ function Marquees() {
         "https://cdn.prod.website-files.com/664dc8b6bc52b504509197f0/6697d300a4cce143f24735d3_sevdesk-black.svg",
     ]]
   return (
-    <div className='mt-20'>
+    <div className='mt-20 py-20'>
         {data.map(item=>   <Marquee imgurl ={item}/>)}
      
     </div>
