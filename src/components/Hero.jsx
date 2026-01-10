@@ -1,14 +1,49 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import {motion, useScroll,useMotionValueEvent } from "motion/react"
 function Hero() {
-     var images=[
+     
+     const [images,SetImage]=useState([
 {url:"https://images.unsplash.com/photo-1767304590980-9c075c875c38?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8",top:"45%",left:"30%",isActive:false},
 {url:"https://images.unsplash.com/photo-1767290645350-dcb4e6bf9d04?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMnx8fGVufDB8fHx8fA%3D%3D",top:"60%",left:"27%",isActive:false},
 {url:"https://images.unsplash.com/photo-1761839258753-85d8eecbbc29?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D",top:"50%",left:"33%",isActive:false},
 {url:"https://images.unsplash.com/photo-1766859813732-20a127bb6023?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0N3x8fGVufDB8fHx8fA%3D%3D",top:"70%",left:"25%",isActive:false},
 
 
-    ]
+    ])
+const { scrollYProgress ,} = useScroll()
+
+useMotionValueEvent(scrollYProgress, "change", (latest) => {
+  ShownHide(Math.floor(latest*100) )
+})
+function ShownHide(scrollYval){
+switch(scrollYval){
+  case 0:
+    ShowImages([])
+    break;
+  case 2:
+    ShowImages([0])
+    break;
+   case 3:
+    ShowImages([0,1])
+    break;
+  case 4:
+    ShowImages([0,1,2])
+    break;
+  case 5:
+    ShowImages([0,1,2,3]) 
+    break;
+}
+}
+function ShowImages(arr){
+  SetImage(prev=>(
+prev.map((items,index)=>(
+  arr.indexOf(index)=== -1 ?(
+    {...items,isActive:false}
+  )
+  :{...items,isActive:true}
+))
+  ))
+}
   return (
     <div>
         <div className='max-w-screen-xl  mx-auto text-center relative'>
