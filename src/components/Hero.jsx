@@ -20,16 +20,16 @@ switch(scrollYval){
   case 0:
     ShowImages([])
     break;
-  case 2:
+  case 1:
     ShowImages([0])
     break;
-   case 3:
+   case 4:
     ShowImages([0,1])
     break;
-  case 4:
+  case 7:
     ShowImages([0,1,2])
     break;
-  case 5:
+  case 10:
     ShowImages([0,1,2,3]) 
     break;
 }
