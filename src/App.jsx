@@ -14,7 +14,7 @@ function App() {
    <Hero/>
    <Stripes/>
    <Products/>
-   <Marquees/>
+   {/* <Marquees/> */}
    <Cards/>
    <Footer/>
     </div>

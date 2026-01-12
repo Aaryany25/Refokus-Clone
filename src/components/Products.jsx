@@ -15,7 +15,7 @@ function Products() {
       desc: "At Refokus, web design is where creativity meets functionality. We craft visually striking and emotionally engaging websites that capture your brand's essence. Our designs blend beauty with seamless navigation, enhanced by micro- interactions and Lottie animations. Every detail, from concept to pixel, aligns with your vision an business goals.",
     },
     {
-      name: "Webflow Development",
+      name: "Web Development",
       url: "https://cdn.prod.website-files.com/664dc8b6bc52b504509197e4/66c3bb13c9d1cdce681e0e73_10.webp",
       desc: "Webflow development is at the heart of what we do. Using Webflow's power and flexibility, we create fully functional, customizable, responsive websites quickly, repurposing saved time to enhance user experiences. Our expertise includes API integrations and building on top of Webflow, delivering robust, scalable, and easy-to-manage sites.",
     },
@@ -45,22 +45,33 @@ function Products() {
             animate={{ y: -pos + "rem" }}
             transition={{ ease: [0.45, 0, 0.55, 1], duration: 0.5 }}
             className="w-full h-full bg-amber-300"
-          ></motion.div>
+          >
+            <img src="https://cdn.prod.website-files.com/664dc8b6bc52b504509197e4/6867e5af4ce59d080b9ebf42_branding-big.webp" alt="" className="w-full h-full object-cover" />
+
+          </motion.div>
           <motion.div
             animate={{ y: -pos + "rem" }}
             transition={{ ease: [0.45, 0, 0.55, 1], duration: 0.5 }}
             className="w-full h-full bg-amber-900"
-          ></motion.div>
+          >
+            <img src="https://cdn.prod.website-files.com/664dc8b6bc52b504509197e4/66c3bb125095523f5ce87a2a_9.webp" alt="" className="w-full h-full object-cover" />
+
+          </motion.div>
           <motion.div
             animate={{ y: -pos + "rem" }}
             transition={{ ease: [0.45, 0, 0.55, 1], duration: 0.5 }}
             className="w-full h-full bg-amber-400"
-          ></motion.div>
+          >
+            <img src="https://cdn.prod.website-files.com/664dc8b6bc52b504509197e4/66c3bb13c9d1cdce681e0e73_10.webp" alt="" className="w-full h-full object-cover" />
+
+          </motion.div>
           <motion.div
             animate={{ y: -pos + "rem" }}
             transition={{ ease: [0.45, 0, 0.55, 1], duration: 0.5 }}
-            className="w-full h-full bg-amber-600"
-          ></motion.div>
+            className="w-full h-full "
+          >
+            <img src="https://cdn.prod.website-files.com/664dc8b6bc52b504509197e4/6867e5af4ce59d080b9ebf42_branding-big.webp" alt="" className="w-full h-full object-cover" />
+          </motion.div>
         </motion.div>
       </div>
     </div>
